@@ -30,7 +30,7 @@ def server_error(error):
 def index():
     user_ip = request.remote_addr
 
-    response = make_response(redirect('/hello'))
+    response = make_response(redirect(url_for('hello', _external=True)))
     session['user_ip'] = user_ip
 
     return response
@@ -55,7 +55,7 @@ def hello():
 
         flash('Nombre de usario registrado con éxito!')
 
-        return redirect(url_for('index'))
+        return redirect(url_for('index', _external=True))
 
     return render_template('hello.html', **context)
 
