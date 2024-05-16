@@ -10,6 +10,7 @@ cryptography==42.0.7
 dominate==2.9.1
 firebase-admin==6.5.0
 Flask==3.0.3
+Flask-Login==0.6.3
 Flask-Testing==0.8.1
 Flask-WTF==1.2.1
 google-api-core==2.19.0
