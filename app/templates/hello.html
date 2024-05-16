@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
-{% import 'macros.html' as macros %}
-{% import 'bootstrap/wtf.html' as wtf %}
+{% import 'todos.html' as macros %}
 
 {% block title %}
     {{ super() }}
@@ -8,6 +7,7 @@
 {% endblock %}
 
 {% block content %}
+
     {% if username %}
         <h1>Bienvenido, {{ username | capitalize }}</h1>
     {% endif %}
