@@ -1,35 +1,25 @@
-<!--<nav>-->
-    <!--<ul>-->
-        <!--<img src="{{ url_for('static', filename='images/platzi.png')}}" alt="Platzi Logo">-->
-        <!--<li><a href="{{ url_for('index') }}">Ir a inicio</a></li>-->
-        <!--<li><a href="https://platzi.com" target="_blank">Ir a Platzi</a></li>-->
-    <!--</ul>-->
-<!--</nav>-->
-
-<div class="navbar navbar-inverse" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button"
-                    class="navbar-toggle"
-                    data-toggle="collapse"
-                    data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{ url_for('index') }}">
-                <img src="{{ url_for('static', filename='images/platzi.png') }}"
-                     style="max-width: 48px"
-                     alt="Platzi logo">
-            </a>
-        </div>
-
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="{{ url_for('index') }}">Inicio</a></li>
-                <li><a href="https://platzi.com" target="_blank">Platzi</a></li>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 20px;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='images/platzi.png') }}"alt="Platzi logo">
+            Mirame
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://platzi.com" target="_blank">Platzi</a>
+                </li>
             </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
         </div>
     </div>
-</div>
+</nav>
