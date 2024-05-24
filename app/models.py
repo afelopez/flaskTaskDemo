@@ -10,7 +10,7 @@ class UserDTO:
 class UserModel(UserMixin):
     def __init__(self, userdto):
         self.id = userdto.username
-        serlf.password = userdto.password
+        self.password = userdto.password
     
     @staticmethod
     def query(user_id):

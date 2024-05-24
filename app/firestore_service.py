@@ -18,3 +18,6 @@ def get_user(user_id):
 def get_todos(user_id):
     return db.collection('users').document(user_id).collection('todos').get()
 
+def put_user(user_dto):
+    user = db.collection('users').document(user_dto.username)
+    user.set({'password': user_dto.password})
