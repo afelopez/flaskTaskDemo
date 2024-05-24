@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% import 'todos.html' as macros %}
+{% from "bootstrap5/form.html" import render_form %}
 
 {% block title %}
     {{ super() }}
@@ -11,6 +12,10 @@
     {% if username %}
         <h1>Bienvenido, {{ username | capitalize }}</h1>
     {% endif %}
+    <div class="container">
+        <h2>Creación de tareas</h2>
+        {{render_form(todo_form)}}
+    </div>
 
     {% if user_ip %}
         <h3>Tu IP es {{ user_ip }}</h3>

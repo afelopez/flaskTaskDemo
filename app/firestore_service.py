@@ -21,3 +21,7 @@ def get_todos(user_id):
 def put_user(user_dto):
     user = db.collection('users').document(user_dto.username)
     user.set({'password': user_dto.password})
+    
+def put_todo(user_id, description):
+    documents = db.collection('users').document(user_id).collection('todos')
+    documents.add({'description': description})
